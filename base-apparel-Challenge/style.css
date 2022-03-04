@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans";
+  font-size: 16px;
+}
+header {
+  padding: 30px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  text-align: center;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+.container .right {
+  width: 100%;
+  height: 300px;
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container .left {
+  width: 100%;
+  height: auto;
+  padding: 50px 30px 0px 30px;
+}
+.container .left h1 {
+  font-size: 3.2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: hsl(0, 36%, 70%);
+  line-height: 3.5rem;
+  letter-spacing: 0.5rem;
+}
+.container .left h1 span {
+  color: hsl(0, 6%, 24%);
+  font-weight: 500;
+}
+.container .left p {
+  color: hsl(0, 36%, 70%);
+  padding: 20px 0px 50px 0px;
+  line-height: 1.5rem;
+}
+.container form {
+  margin-bottom: 100px;
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+.container form input {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  border-radius: 35px;
+  outline: none;
+  left: 0;
+  top: 0;
+  padding-left: 40px;
+  border: 1.5px solid hsl(0, 36%, 70%);
+  font-size: 18px;
+  font-family: "Josefin Sans";
+  font-size: 1.1rem;
+  color: hsl(0, 6%, 24%);
+}
+
+.container form button {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  height: 60%;
+  width: 20%;
+  border-radius: 40px;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0px 0px 15px 1px hsl(0, 28%, 71%);
+}
+.container form button:hover {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    rgba(223, 168, 168, 0.008)
+  );
+}
+.container form input::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.7;
+}
+.container form .error {
+  display: inline-block;
+  position: absolute;
+  right: 22%;
+  top: 19%;
+  display: none;
+}
+.container form .errortext {
+  position: absolute;
+  left: 30px;
+  top: 43px;
+  font-size: 0.9rem;
+  color: hsl(0, 93%, 68%);
+  display: none;
+}
+.container form.errorn .error {
+  display: block;
+}
+.container form.errorn .errortext {
+  display: block;
+}
+.container form.errorn input {
+  border: 1.5px solid hsl(0, 93%, 68%);
+}
+@media screen and (min-width: 786px) {
+  header {
+    position: absolute;
+    padding-left: 10%;
+    padding-top: 60px;
+  }
+  header img {
+    width: 170px;
+  }
+  .container {
+    flex-direction: row;
+    padding-bottom: 0%;
+    align-items: left;
+    justify-content: flex-end;
+
+    text-align: left;
+  }
+  .container .right {
+    width: 50%;
+    height: 100vh;
+    width: 80%;
+    background-image: url(./images/hero-desktop.jpg);
+    background-position: left top;
+    background-size: cover;
+  }
+
+  .container .left {
+    padding: 14% 20% 0px 10%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .container.left h1 {
+    font-size: 5rem;
+    line-height: 5.5em;
+  }
+  .container .left p {
+    font-size: 1.1rem;
+  }
+  .container .left form button {
+    width: 100px;
+  }
+  .container form .error {
+    right: 108px;
+    display: none;
+  }
+  .container form .errortext {
+    font-size: 0.9rem;
+    display: none;
+  }
+}
