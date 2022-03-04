@@ -13,7 +13,7 @@ Thanks for checking out this front-end coding challenge.
 
 ## Got feedback for us?
 
-We love receiving feedback! Please email hi [Mubashira M K](emailto:mubashira.mk07@gmail.com?).
+We love receiving feedback! Please email hi [Mubashira M K](emailto:mubashira.mk07@gmail.com?subject=[GitHub] Source Han Sans).
 
 
 
