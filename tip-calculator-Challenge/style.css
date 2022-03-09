@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Space+Mono:wght@700&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0 auto;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+}
+header {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  padding: 25px 0 20px 0;
+}
+header img {
+  width: 87px;
+  height: 54px;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px 30px 0 0;
+  height: autos;
+  padding: 8% 6% 8% 6%;
+}
+.container .left {
+  height: auto;
+
+  padding-bottom: 30px;
+}
+label {
+  color: hsl(186, 14%, 43%);
+  font-size: 0.85rem;
+}
+.container .left form .bill {
+  background-color: hsl(189, 41%, 97%);
+  height: 40px;
+  border: 0px;
+  width: 97%;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  color: hsl(183, 100%, 15%);
+  font-size: 24px;
+  text-align: end;
+  font-weight: 700;
+}
+.container .left .billarea {
+  position: relative;
+  margin-bottom: 70px;
+}
+.container .left .billarea input::placeholder,
+.container .left .peoplearea input::placeholder {
+  text-align: end;
+  font-size: 20px;
+  font-weight: 400;
+  color: hsl(185, 41%, 84%);
+}
+.container .left .billarea img {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+.container .left form .people {
+  background-color: hsl(189, 41%, 97%);
+  height: 40px;
+  border: 0px;
+  width: 97%;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  color: hsl(183, 100%, 15%);
+  font-size: 24px;
+  text-align: end;
+  font-weight: 700;
+}
+
+.container .left .peoplearea {
+  position: relative;
+  margin-bottom: 30px;
+}
+.container .left .peoplearea img {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.container .left .tip {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0%;
+}
+.container .left .tip .tips {
+  width: 45%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  color: hsl(185, 41%, 84%);
+  height: 55px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 1%;
+  border: 0px;
+}
+.container .left .tip .tips:active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.container .left .tip .tips:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.container .left .tip .tip-5,
+.container .left .tip .tip-50,
+.container .left .tip .tip-15,
+.container .left .tip .tip-10,
+.container .left .tip .tip-25 {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.container .left .tip .custom {
+  background-color: hsl(189, 41%, 97%);
+  position: relative;
+}
+.container .left .tip .tips .tip-custom {
+  width: 100%;
+  height: 96%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 0;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  border: 0px hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+input::placeholder {
+  color: hsl(186, 14%, 43%);
+
+  font-size: 24px;
+  text-align: center;
+}
+input:focus {
+  outline-color: hsl(172, 67%, 45%);
+}
+.newone:focus {
+  outline-color: rgb(190, 55, 55);
+}
+/*.container .left .error {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: rgb(190, 55, 55);
+  font-size: small;
+  display: none;
+}
+*/
+.errorn {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: rgb(190, 55, 55);
+  font-size: small;
+}
+
+.container .right {
+  background-color: hsl(183, 100%, 15%);
+  height: auto;
+  border-radius: 10px;
+
+  padding: 8% 8% 8% 8%;
+}
+
+.container .right .text {
+  color: hsl(185, 41%, 84%);
+  font-size: 0.89em;
+}
+.container .right .text .person {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.8rem;
+}
+
+.container .right .tip-amount {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 70px;
+  align-items: center;
+}
+
+.container .right .tip-amount .result {
+  position: absolute;
+  right: 2%;
+  color: hsl(172, 67%, 45%);
+  font-size: 27px;
+}
+.container .right .total {
+  display: flex;
+  flex-direction: row;
+}
+.container .right .total {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 70px;
+  align-items: center;
+}
+.container .right .total .result {
+  position: absolute;
+  right: 2%;
+  color: hsl(172, 67%, 45%);
+  font-size: 27px;
+  font-weight: 700;
+}
+.container .right .reset {
+  background-color: hsl(172, 67%, 45%);
+  font-size: 17px;
+  color: hsl(183, 100%, 15%);
+  text-align: center;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 630px) {
+  body {
+    margin: 5% 15% 10% 15%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    padding: 3.5%;
+  }
+  .container .left {
+    width: 50%;
+    margin-right: 25px;
+  }
+  .container .right {
+    width: 40%;
+    position: relative;
+  }
+  .container .left .peoplearea {
+    margin-bottom: 0px;
+  }
+  .container .right .reset {
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    right: 10%;
+  }
+  .container .right .total {
+    margin-top: 35px;
+  }
+  .container .left .tip .tips {
+    width: 125px;
+  }
+  .container .left .tip .tip-5,
+  .container .left .tip .tip-50,
+  .container .left .tip .tip-15,
+  .container .left .tip .tip-10,
+  .container .left .tip .tip-25 {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}

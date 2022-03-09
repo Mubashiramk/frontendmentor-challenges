@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="" />
+    </header>
+    <div class="container">
+      <div class="left">
+        <form action="#" class="form">
+          <label for="">Bill</label><br />
+          <div class="billarea">
+            <input
+              type="number"
+              step="any"
+              id="bill"
+              class="bill"
+              placeholder="0"
+            />
+            <img src="./images/icon-dollar.svg" alt="$" />
+          </div>
+
+          <label for="">Select Tip %</label>
+          <div class="tip">
+            <button class="tips tip-5" value="5">5%</button>
+            <button class="tips tip-10" value="10">10%</button>
+
+            <button class="tips tip-15" value="15">15%</button>
+            <button class="tips tip-25" value="25">25%</button>
+
+            <button class="tips tip-50" value="50">50%</button>
+            <div class="tips custom" id="tip-custom">
+              <input type="number" class="tip-custom" placeholder="Custom" />
+            </div>
+          </div>
+          <div>
+            <br />
+            <label for=""> Number of People</label><br />
+            <div class="peoplearea">
+              <input
+                type="number"
+                class="people"
+                placeholder="0"
+                id="pep"
+              /><br />
+              <img src="./images/icon-person.svg" alt="person" />
+
+              <div class="error" id="error">Can't be zero</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="right">
+        <div class="tip-amount">
+          <div class="text">
+            <p>Tip Amount</p>
+            <p class="person">/ person</p>
+          </div>
+          <div class="result" id="tip-result">$0.00</div>
+        </div>
+        <div class="total">
+          <div class="text">
+            <p>Total</p>
+            <p class="person">/ person</p>
+          </div>
+          <div class="result" id="total-result">$0.00</div>
+        </div>
+        <div class="reset" onclick="resetform()">RESET</div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
