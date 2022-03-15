@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Outfit:wght@400;700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Crowdfunding product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./tailwind/output.css" />
+  </head>
+  <body class="bg-slate-100 m-0 p-0">
+    <header
+      class="bg-cover relative h-64 pt-7 flex-1 items-center bg-[url(/images/image-hero-mobile.jpg)] lg:bg-[url(/images/image-hero-desktop.jpg)]"
+      
+      id="header"
+    >
+            <nav class="flex justify-between px-5">
+                <div>
+                    <img src="./images/logo.svg" alt="logo" />
+                </div>
+                <div>
+                    <button class="lg:hidden cursor-pointer" id="menu-icon">
+                      <img src="./images/icon-hamburger.svg" alt="" class="w-6" />
+                    </button>
+                    <button class="hidden w-4 h-4 cursor-pointer" id="menu-close">
+                      <img src="./images/icon-close-menu.svg" alt="" class="w-6" />
+                    </button>
+                </div>
+
+                <div
+                  class="hidden font-medium text-xl top-nav w-full font-[mono] lg:inline-flex lg:inline-grow lg:w-auto lg:items-top"
+                  id="nav-menu"
+                >
+                      <div class="lg:inline-flex lg:flex-grow lg:ml-auto px-5 font-[outfit] text-white text-[16px]">
+                          <a href="#" class="lg:inline-flex lg:w-auto hover:text-teal-500 "><span>About</span></a>
+                          <a href="#" class="lg:inline-flex mx-[50px] hover:text-teal-500"><span>Discover </span></a>
+                          <a href="#" class="lg:inline-flex hover:text-teal-500"><span>Get Started </span></a>
+                      </div>
+                </div>
+            </nav>
+
+            <div
+              class="hidden z-[10] shadow-[0_100px_200px_-15px_rgba(0,0,0,0.5)] font-[outfit] font-medium text-xl flex-1 bg-white absolute mx-[10%] w-3/4 h-3/4 bottom-0 rounded-lg lg:hidden"
+              id="menu"
+            >
+                <div
+                  class="h-full w-full flex flex-col text-black rounded-lg items-center"
+                >
+                    <a
+                      href="#"
+                      class="font-[outfit] text-start pt-[4%] pl-5 flex-1 w-full hover:text-teal-500"
+                      ><span>About</span></a>
+                    <a href="#" class="text-start flex-1 w-full pt-[4%] pl-5 border-y hover:text-teal-500"
+                      ><span>Discover </span></a>
+                    <a href="#" class="text-start flex-1 w-full pt-[4%] pl-5 hover:text-teal-500"
+                      ><span>Get Started </span></a>
+                </div>
+            </div>
+    </header>
+    <div class="absolute top-[30%] w-full px-[5%] lg:px-[15%]">
+      <div
+        class="container-1 h-full w-[95%] pb-[5%] mx-[1%] rounded-lg border-0 bg-white px-6 pt-14 relative text-center mb-5"
+      >
+        <img
+          src="./images/logo-mastercraft.svg"
+          alt=""
+          class="absolute left-[45%] top-[-14%]"
+        />
+        <h1 class="font-[outfit] font-bold text-xl pb-4 lg:text-2xl">
+          Mastercraft Bamboo Monitor Riser
+        </h1>
+        <p class="text-gray-400 text-[14px] font-[outfit] pb-4 lg:text-[15px]">
+          A beautifully handcrafted monitor stand to reduce neck and eye strain.
+        </p>
+        <div class="flex h-11 lg:w-[95%]  ">
+          <button
+            id="project-button"
+            class="bg-teal-500 hover:bg-teal-700 transition-color duration-200 delay-200  text-teal-100 h-auto w-[60%] ml-[10%] rounded-[60px] mr-2 lg:w-[200px] lg:h-[60px] lg:mr-[30%] lg:ml-[14%]"
+          >
+            Back this project
+          </button>
+          <button class="flex pointer lg:w-[180px] lg:h-[50px] lg:bg-slate-200  lg:rounded-full lg:right-0" id="bookmark" >
+                <div class="bg-black h-11 w-11 rounded-full py-2.5 px-3 lg:h-[50px] lg:w-[50px] lg:px-2.5 lg:mr-2" id="bookmark-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5 fill-zinc-400 lg:h-7 lg:w-7" id="bookmark-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                  </svg>
+                </div>
+                <!--<img src="./images/icon-bookmark.svg" alt="" class="h-11" />-->
+                <span class="hidden lg:inline-flex  pt-3 text-[15px] font-[outfit] text-gray-600" id="bookmark-text">Bookmark</span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="items-center  h-full w-[95%] py-5 mx-[1%] rounded-lg border-0 bg-white px-6 text-center mb-5 "
+      >
+        <div class="flex items-center flex-col lg:flex-row">
+            <div class="h-[100px] items-center pt-[5%] lg:flex1 lg:w-[33%]">
+              <h1 class="font-[outfit] font-semibold text-3xl mb-2">$89,914</h1>
+              <p class="text-gray-400 text-[14px] font-[outfit]">
+                of $100,000 backed
+              </p>
+            </div>
+            <div class="h-[100px] w-[100px] items-center pt-[5%] border-y lg:flex-1 lg:border-y-0 lg:border-x lg:w-[33%]" >
+              <h1 class="font-[outfit] font-semibold text-3xl mb-2">5,007</h1>
+              <p class="text-gray-400 text-[14px] font-[outfit]">total backers</p>
+            </div>
+            <div class="h-auto w-full items-center pt-[18px] lg:flex-1 lg:w-[33%]">
+              <h1 class="font-[outfit] font-semibold text-3xl mb-2">56</h1>
+              <p class="text-gray-400 text-[14px] font-[outfit] mb-1">days</p>
+              <div class="w-[full] bg-slate-100 h-3 rounded-xl my-7 mx-[5%] lg:hidden">
+                <div class="bg-teal-500 h-3 w-[75%] rounded-xl"></div>
+              </div>
+            </div><br/>
+          </div><br/>
+            <div class="hidden lg:block">
+              <div class="w-[full] bg-slate-100 h-3 rounded-xl my-7 mx-[5%]">
+                <div class="bg-teal-500 h-3 w-[75%] rounded-xl"></div>
+              </div>
+            </div>
+      </div>
+      <div
+        class="flex relative items-center flex-col h-full w-[95%] pt-[80px] pb-5 mx-[1%] rounded-lg border-0 bg-white px-6 text-left lg:px-8"
+      >
+              <h1
+                class="absolute font-[outfit] text-left font-bold text-medium top-7 left-6 lg:text-xl lg:left-8"
+              >
+                About this project
+              </h1>
+              <p class="text-gray-400 text-[14px] font-[outfit] lg:text-[15px]">
+                The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
+                that elevates your screen to a more comfortable viewing height.
+                Placing your monitor at eye level has the potential to improve your
+                posture and make you more comfortable while at work, helping you stay
+                focused on the task at hand.
+              </p>
+              <br />
+              <p class="text-gray-400 text-[14px] font-[outfit]">
+                Featuring artisan craftsmanship, the simplicity of design creates
+                extra desk space below your computer to allow notepads, pens, and USB
+                sticks to be stored under the stand.
+              </p><br/>
+              <div class=" relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left"
+              ">   
+                    <h1 class="font-[outfit] font-bold text-medium pb-2 lg:text-lg lg:pb-4">Bamboo Stand</h1>
+                    <p class="text-teal-500 text-[14px] font-[outfit] pb-5 lg:absolute lg:right-[9%] lg:top-5 lg:text-[15px]" >Pledge $25 or more</p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-5 lg:text-[15px] lg:pb-10">
+                      You get an ergonomic stand made of natural bamboo. You've helped us
+                      launch our promotional campaign, and you’ll be added to a special
+                      Backer member list.
+                    </p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-4"><span class="font-[outfit] font-semibold text-3xl text-black">101 </span>left</p>
+                    <button class="bg-teal-500 text-teal-100 h-[50px] w-[60%] rounded-3xl lg:absolute lg:right-[9%] lg:top-[140px] lg:w-[180px]">Select Reward</button>
+              </div><br/>
+
+            <div class=" relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left"
+            ">
+                    <h1 class="font-[outfit] font-bold text-medium pb-2 lg:text-lg lg:pb-4">Black Edition Stand</h1>
+                    <p class="text-teal-500 text-[14px] font-[outfit] pb-5 lg:absolute lg:right-[9%] lg:top-5 lg:text-[15px]">Pledge $75 or more</p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-5 lg:text-[15px] lg:pb-10">
+                      You get a Black Special Edition
+                  computer stand and a personal thank you. You’ll be added to our Backer
+                  member list. Shipping is included.
+                    </p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-4"><span class="font-[outfit] font-semibold text-3xl text-black">64 </span>left</p>
+                    <button class="bg-teal-500 text-teal-100 h-[50px] w-[60%] rounded-3xl lg:absolute lg:right-[9%] lg:top-[140px] lg:w-[180px]">Select Reward</button>
+            </div><br/>
+            <div class="opacity-50 relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left"
+            ">
+                    <h1 class="font-[outfit] font-bold text-medium pb-2 lg:text-lg lg:pb-4">Mahogany Special Edition</h1>
+                    <p class="text-teal-500 text-[14px] font-[outfit] pb-5 lg:absolute lg:right-[9%] lg:top-5 lg:text-[15px]">Pledge $200 or more</p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-5 lg:text-[15px] lg:pb-10">
+                      You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to
+                      our Backer member list. Shipping is included.
+                    </p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-4"><span class="font-[outfit] font-semibold text-3xl  text-neutral-500">0 </span>left</p>
+                    <button class="bg-neutral-400 text-white h-[50px] w-[60%] rounded-3xl lg:absolute lg:right-[9%] lg:top-[140px] lg:w-[180px]">Out of Stock</button>
+        </div>
+
+      </div>
+      
+      <div class="hidden">
+           
+
+   
+
+    
+  </div>
+      </div>
+      <div class="hidden fixed w-full h-full px-[5%] top-0 left-0 right-0 bottom-0 bg-overlay-rgba z-[2] pt-[100px] lg:px-[25%] md:px-[15%]" id="overlay-success">
+        <div class=" flex flex-col items-center w-[95%] pt-[20px] pb-5 mx-[1%] my-[80px] rounded-lg border-0 bg-white px-6 ">
+          <img src="./images/icon-check.svg" alt=""><br/>
+          <h1 class="font-[outfit] text-left font-bold text-lg">Thanks for your support!</h1><br/>
+          <p class="text-center text-gray-400 text-[14px] font-[outfit]">Your pledge brings us one step closer to
+            sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
+            email once our campaign is completed.</p><br/>
+          <button class="bg-teal-500 h-[50px] w-[35%] rounded-full hover:bg-teal-700 transition-color duration-200 delay-200  text-teal-100" id="gotit">Got it!</button>
+          
+        </div>
+        
+      </div>
+      <form action="" name="forma">
+      <div class="hidden fixed w-full h-full px-[5%] top-0 left-0 right-0 bottom-0 bg-overlay-rgba z-[2] pt-[100px] lg:px-[20%] md:px-[10%]" id="overlay"> 
+        <div class="flex relative items-center flex-col h-[85vh] overflow-y-scroll  w-[95%] pt-[80px] pb-5 mx-[1%] rounded-lg border-0 bg-white px-6 text-left ">
+            <h1 class="absolute font-[outfit] text-left font-bold text-lg top-7 left-6">
+              Back this project
+            </h1>
+            <img src="./images/icon-close-modal.svg" alt="" class="absolute pointer top-9 right-6 " id="modal-close">
+            <p class="text-gray-400 text-[14px] font-[outfit]">
+              Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+            </p><br/>
+
+            <div class=" relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left" id="no-reward">
+                  <div class="flex flex-row pb-5">
+                       <input type="radio" name="selection" id="" value="0" class="form-radio mr-3 ring-gray-400 ring-2  checked:bg-teal-500 h-6 w-6" >
+                       <h1 class="font-[outfit] font-bold text-medium pb-2 hover:text-teal-500 pointer ">Pledge with no reward</h1>
+                  </div>
+                  <p class="text-gray-400 text-[14px] font-[outfit] pb-5">
+                    Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.
+                  </p>
+                  <div class="text-center border-t-2 py-4 hidden "  id="pledge-0">
+                      <p class="text-gray-400 text-[16px] font-[outfit] mb-6 ">Enter your pledge</p>
+                      <div class="flex  relative ">
+                          <img src="./images/icon-dollar copy.svg" alt="" class="h-5 absolute left-2 top-4">
+                          <p class="hidden absolute text-red-600 text-[13px] font-[outfit] left-2 top-14">Please enter a valid pledge</p>
+                          <input type="number" name="" id="noreward-input" placeholder="0.00" class="border-2 h-11 rounded-full w-[65%] left-0 p-6 mr-2 focus:outline-teal-500 lg:w-[30%] lg:mr-[38%]">
+                          <button class="bg-teal-500 h-13 w-[35%] rounded-full hover:bg-teal-700 transition-color duration-200 delay-200  text-teal-100 lg:w-[30%]" id="continue">Continue</button>
+                      </div>
+                  </div>
+             </div><br/>
+             <div class=" relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left" id="bamboo-reward">
+                  <div class="flex flex-row pb-5">
+                      <input type="radio" name="selection" id="" value="25"  class="form-radio mr-3 ring-gray-400 ring-2  checked:bg-teal-500 h-6 w-6" >
+                      <h1 class="font-[outfit] font-bold text-medium pb-2 hover:text-teal-500 pointer">Bamboo Stand</h1>
+                  </div>
+                  <p class="text-teal-500 text-[14px] font-[outfit] pb-5 lg:absolute lg:right-8 lg:top-6 ">Pledge $25 or more</p>
+                  <p class="text-gray-400 text-[14px] font-[outfit] pb-5">
+                    You get an ergonomic stand made of natural bamboo.
+                    You've helped us launch our promotional campaign, and you’ll be added to
+                    a special Backer member list. 
+                  </p>
+                  <p class="text-gray-400 text-[14px] font-[outfit] pb-4"><span class="font-[outfit] font-semibold text-lg text-black">101</span> left</p>
+                  <div class="text-center border-t-2 py-4  hidden" id="pledge-25" >
+                        <p class="text-gray-400 text-[16px] font-[outfit] mb-6 ">Enter your pledge</p>
+                        <div class="flex  relative ">
+                            <img src="./images/icon-dollar copy.svg" alt="" class="h-5 absolute left-2 top-4">
+                            <p class="hidden absolute text-red-600 text-[13px] font-[outfit] left-2 top-14" id="error-25">Please enter a valid pledge</p>
+                            <input type="number" name="" id="bamboo-input" placeholder="0.00" class="border-2 h-11 rounded-full w-[65%] left-0 p-6 mr-2 focus:outline-teal-500 lg:w-[30%] lg:mr-[38%]">
+                            <button class="bg-teal-500 h-13 w-[35%] rounded-full hover:bg-teal-700 transition-color duration-200 delay-200  text-teal-100 lg:w-[30%]" id="continue-25">Continue</button>
+                        </div>
+                  </div>
+              </div><br/>
+              <div class=" relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left" id="black-reward">
+                    <div class="flex flex-row pb-5">
+                        <input type="radio" name="selection" id="" value="75" class="form-radio mr-3 ring-gray-400 ring-2  checked:bg-teal-500 h-6 w-6">
+                        <h1 class="font-[outfit] font-bold text-medium pb-2 hover:text-teal-500 pointer">Black Edition Stand</h1>
+                    </div>
+                    <p class="text-teal-500 text-[14px] font-[outfit] pb-5 lg:absolute lg:right-8 lg:top-6">Pledge $75 or more</p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-5">
+                      Pledge $75 or more You get a Black Special Edition
+                      computer stand and a personal thank you. You’ll be added to our Backer
+                      member list. Shipping is included.
+                    </p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-4"><span class="font-[outfit] font-semibold text-lg text-black">64 </span>left</p>
+                    <div class="text-center border-t-2 py-4 hidden " id="pledge-75">
+                        <p class="text-gray-400 text-[16px] font-[outfit] mb-6 ">Enter your pledge</p>
+                        <div class="flex  relative ">
+                            <img src="./images/icon-dollar copy.svg" alt="" class="h-5 absolute left-2 top-4">
+                            <p class="hidden absolute text-red-600 text-[13px] font-[outfit] left-2 top-14" id="error-75">Please enter a valid pledge</p>
+                            <input type="number" name="" id="black-input" placeholder="0.00" class="border-2 h-11 rounded-full w-[65%] left-0 p-6 mr-2 focus:outline-teal-500 lg:w-[30%] lg:mr-[38%]">
+                            <button class="bg-teal-500 h-13 w-[35%] rounded-full hover:bg-teal-700 transition-color duration-200 delay-200  text-teal-100 lg:w-[30%]" id="continue-75">Continue</button>
+                        </div>
+                    </div>
+              </div><br/>
+              <div class=" relative items-left flex-col h-full w-full px-4 py-5 mx-[1%] rounded-lg border-2 bg-white  text-left" id="mahogany-reward">
+                    <div class="flex flex-row pb-5">
+                        <input type="radio" name="selection" id="" value="200" class="form-radio mr-3 ring-gray-400 ring-2  checked:bg-teal-500 h-6 w-6">
+                        <h1 class="font-[outfit] font-bold text-medium pb-2 hover:text-teal-500 pointer">Mahogany Special Edition</h1>
+                    </div>
+                    <p class="text-teal-500 text-[14px] font-[outfit] pb-5 lg:absolute lg:right-8 lg:top-6">Pledge $200 or more</p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-5">
+                      Pledge $200 or more You get two Special Edition
+                       Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
+                       added to our Backer member list. Shipping is included.
+                    </p>
+                    <p class="text-gray-400 text-[14px] font-[outfit] pb-4"><span class="font-[outfit] font-semibold text-lg text-black">0 </span>left</p>
+                    <div class="text-center border-t-2 py-4 hidden " id="pledge-200">
+                          <p class="text-gray-400 text-[16px] font-[outfit] mb-6 ">Enter your pledge</p>
+                          <div class="flex  relative ">
+                              <img src="./images/icon-dollar copy.svg" alt="" class="h-5 absolute left-2 top-4">
+                              <p class="hidden absolute text-red-600 text-[13px] font-[outfit] left-2 top-14" id="error-200">Please enter a valid pledge</p>
+                              <input type="number" name="" id="mahogany-input" placeholder="0.00" class="border-2 h-11 rounded-full w-[65%] left-0 p-6 mr-2 focus:outline-teal-500 lg:w-[30%] lg:mr-[38%]">
+                              <button class="bg-teal-500 h-13 w-[35%] rounded-full hover:bg-teal-700 transition-color duration-200 delay-200  text-teal-100 lg:w-[30%]" id="continue-200">Continue</button>
+                          </div>
+                    </div>
+               </div><br/>
+        </div>
+    </div>
+  </form>
+
+     
+    </div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
